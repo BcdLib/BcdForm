@@ -7,7 +7,7 @@
 		<Version>0.4.0</Version>
 		<PackageId>BcdLib.BcdForm</PackageId>
 		<Authors>BcdLib</Authors>
-		<PackageTags>BcdForm;BcdLib;blazor;BcdForm</PackageTags>
+		<PackageTags>BcdForm;BcdLib;blazor</PackageTags>
 		<Company></Company>
 		<RepositoryUrl>https://github.com/BcdLib/BcdForm</RepositoryUrl>
 		<Description>
