@@ -5,7 +5,7 @@
 		<TargetFramework>net6.0</TargetFramework>
 		<AssemblyVersion>1.0.0.0</AssemblyVersion>
 		<FileVersion>1.0.0.0</FileVersion>
-		<Version>0.4.0</Version>
+		<Version>0.5.0</Version>
 		<PackageId>BcdLib.BcdForm</PackageId>
 		<Authors>BcdLib</Authors>
 		<PackageTags>BcdForm;BcdLib;blazor</PackageTags>
@@ -16,6 +16,7 @@
 			像使用WinForm一样在Blazor中使用弹窗组件。
 		</Description>
 		<ApplicationIcon>logo.ico</ApplicationIcon>
+		<PackageReadmeFile>../README.md</PackageReadmeFile>
 	</PropertyGroup>
 
 	<ItemGroup>
@@ -31,6 +32,14 @@
 
 	<ItemGroup>
 	  <Folder Include="Properties\" />
+	</ItemGroup>
+
+
+	<ItemGroup>
+	  <None Include="..\README.md">
+	    <Pack>True</Pack>
+	    <PackagePath>\</PackagePath>
+	  </None>
 	</ItemGroup>
 
 	<PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
