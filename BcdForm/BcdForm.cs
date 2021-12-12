@@ -4,11 +4,12 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Components;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.JSInterop;
-using BcdLib.Core;
-using BcdLib.Extensions;
 using Microsoft.AspNetCore.Components.Rendering;
+using BcdLib.Components.Core;
+using BcdLib.Components.Extensions;
+using BcdLib.Components.Types;
 
-namespace BcdLib
+namespace BcdLib.Components
 {
     public abstract class BcdForm : IDisposable
     {
@@ -40,7 +41,7 @@ namespace BcdLib
             RenderFragment = builder => BuildRenderTree(builder);
             if (!string.IsNullOrWhiteSpace(name))
             {
-                this.Name = name;
+                Name = name;
             }
         }
 
@@ -691,7 +692,7 @@ namespace BcdLib
         {
         }
 
-        
+
         /// <summary>
         /// it will trigger in OnAfterRenderAsync
         /// </summary>

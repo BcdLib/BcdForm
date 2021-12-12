@@ -1,4 +1,4 @@
-﻿namespace BcdLib.Core
+﻿namespace BcdLib.Components.Core
 {
     public static class JsInteropConstants
     {

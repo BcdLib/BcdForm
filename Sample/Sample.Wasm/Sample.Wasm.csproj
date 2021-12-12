@@ -11,8 +11,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\BcdLib\BcdForm.csproj" />
-    <ProjectReference Include="..\BcdSample.Common\BcdSample.Common.csproj" />
+    <ProjectReference Include="..\Sample.Common\Sample.Common.csproj" />
   </ItemGroup>
 
   <ItemGroup>

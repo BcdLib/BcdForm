@@ -16,7 +16,7 @@
         "ASPNETCORE_ENVIRONMENT": "Development"
       }
     },
-    "BcdLibSample.Wasm": {
+    "Sample.Wasm": {
       "commandName": "Project",
       "dotnetRunMessages": "true",
       "launchBrowser": true,

@@ -1,8 +1,8 @@
-using BcdLib;
+using BcdLib.Components.Extensions;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Hosting;
 
-namespace BcdLibSample
+namespace Sample.Server
 {
     public class Program
     {

@@ -1,4 +1,6 @@
-﻿namespace BcdLib.Extensions
+﻿using BcdLib.Components.Types;
+
+namespace BcdLib.Components.Extensions
 {
     internal static class BcdHelper
     {

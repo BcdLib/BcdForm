@@ -3,12 +3,13 @@
 <div>
     <section>
         <h1>Usage</h1>
+        <p><b>Note</b> that the <b>root namespace</b> is <code>BcdLib.Components</code></p>
         <ol>
             <li>Add css and js to <strong>index.html</strong> or <strong>_Host.cshtml</strong></li>
         </ol>
-        <pre><code>    &lt;link href=&quot;_content/BcdLib/index.css&quot; rel=&quot;stylesheet&quot;&gt;
+        <pre><code>    &lt;link href=&quot;_content/BcdLib.BcdForm/index.css&quot; rel=&quot;stylesheet&quot;&gt;
  
-    &lt;script src=&quot;_content/BcdLib/index.js&quot;&gt;&lt;/script&gt;
+    &lt;script src=&quot;_content/BcdLib.BcdForm/index.js&quot;&gt;&lt;/script&gt;
 </code></pre>
         <ol start="2">
             <li>Mount BcdContainer in <strong>App.razor</strong></li>
@@ -23,7 +24,9 @@
             <li>Provide IServiceProvider for BcdLib in <strong>Main method</strong> of Program.cs</li>
         </ol>
         <p>For server side:</p>
-        <pre><code class="language-c#">public static void Main(string[] args)
+        <pre><code class="language-c#">+ using BcdLib.Components.Extensions;
+
+public static void Main(string[] args)
 {
     var host = CreateHostBuilder(args).Build();
 +    host.Services.UseBcdForm();
@@ -31,7 +34,9 @@
 }
 </code></pre>
         <p>For WASM:</p>
-        <pre><code class="language-c#">public static async Task Main(string[] args)
+        <pre><code class="language-c#">+ using BcdLib.Components.Extensions;
+            
+public static async Task Main(string[] args)
 {
 	var builder = WebAssemblyHostBuilder.CreateDefault(args);
 	builder.RootComponents.Add&lt;App&gt;(&quot;#app&quot;);

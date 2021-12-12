@@ -1,10 +1,10 @@
 ﻿using System.Collections.Generic;
-using System.Reflection;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Components;
 using Microsoft.JSInterop;
 
-namespace BcdLib
+
+namespace BcdLib.Components
 {
     public partial class BcdFormContainer
     {

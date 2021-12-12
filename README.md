@@ -11,12 +11,15 @@ await form.ShowAsync();
 
 # 1.Usage
 
+**Note** that the **root namespace** is `BcdLib.Components`
+
+
 ## 1.1.Add css and js to **index.html** or **_Host.cshtml**
 
 ```
-+    <link href="_content/BcdLib/index.css" rel="stylesheet">
++    <link href="_content/BcdLib.BcdForm/index.css" rel="stylesheet">
  
-+    <script src="_content/BcdLib/index.js"></script>
++    <script src="_content/BcdLib.BcdForm/index.js"></script>
 ```
 
 ## 1.2.Mount BcdContainer in **App.razor**
@@ -33,6 +36,8 @@ await form.ShowAsync();
 
 For server side:
 ```c#
++ using BcdLib.Components.Extensions;
+
 public static void Main(string[] args)
 {
     var host = CreateHostBuilder(args).Build();
@@ -43,6 +48,8 @@ public static void Main(string[] args)
 
 For WASM:
 ```c#
++ using BcdLib.Components.Extensions;
+
 public static async Task Main(string[] args)
 {
 	var builder = WebAssemblyHostBuilder.CreateDefault(args);

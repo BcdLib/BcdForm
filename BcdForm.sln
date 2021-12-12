@@ -5,13 +5,13 @@ VisualStudioVersion = 17.0.31903.59
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BcdForm", "BcdForm\BcdForm.csproj", "{58D04670-EB37-4DDD-B8D0-93C0D86A2C4F}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Sample.Server", "Sample\Sample.Server.csproj", "{6C33F6D2-7359-4455-9399-A64E302B3206}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Sample.Server", "Sample\Sample.Server\Sample.Server.csproj", "{6C33F6D2-7359-4455-9399-A64E302B3206}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Sample", "Sample", "{D6559451-A339-4652-8E90-4C672D950210}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Sample.Common", "Sample\Sample.Common.csproj", "{823EBA60-06C1-417A-8DD3-97B3D2A06462}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Sample.Common", "Sample\Sample.Common\Sample.Common.csproj", "{823EBA60-06C1-417A-8DD3-97B3D2A06462}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Sample.Wasm", "Sample\Sample.Wasm.csproj", "{B2209307-FA14-4D39-BE9E-4F58057767E4}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Sample.Wasm", "Sample\Sample.Wasm\Sample.Wasm.csproj", "{B2209307-FA14-4D39-BE9E-4F58057767E4}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{1BF3DB39-44F7-467A-8743-C73AD577CD4F}"
 	ProjectSection(SolutionItems) = preProject

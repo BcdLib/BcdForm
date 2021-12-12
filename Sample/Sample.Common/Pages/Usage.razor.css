@@ -25,3 +25,12 @@
     padding: 13px;
     border: 1px solid #dfe2e5;
 }
+
+p > code {
+    padding: .2em .4em;
+    margin: 0;
+    font-size: 85%;
+    background-color: #afb8c133;
+    border-radius: 6px;
+    color: #4f2770;
+}

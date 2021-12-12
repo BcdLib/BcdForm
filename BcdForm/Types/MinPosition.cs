@@ -1,4 +1,4 @@
-﻿namespace BcdLib
+﻿namespace BcdLib.Components.Types
 {
     public enum MinPosition
     {

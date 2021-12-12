@@ -1,17 +1,19 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk.Razor">
 
 	<PropertyGroup>
+		<RootNamespace>BcdLib.Components</RootNamespace>
 		<TargetFramework>net6.0</TargetFramework>
 		<AssemblyVersion>1.0.0.0</AssemblyVersion>
 		<FileVersion>1.0.0.0</FileVersion>
-		<Version>0.4.0</Version>
+		<Version>0.5.0</Version>
 		<PackageId>BcdLib.BcdForm</PackageId>
 		<Authors>BcdLib</Authors>
 		<PackageTags>BcdForm;BcdLib;blazor</PackageTags>
 		<Company></Company>
 		<RepositoryUrl>https://github.com/BcdLib/BcdForm</RepositoryUrl>
 		<Description>
-			BcdForm is a blazor component library. Use Blazor like WinForm. The original name was BcdLib.
+			BcdForm is a dialog blazor component. Use Blazor like WinForm.
+			像使用WinForm一样在Blazor中使用弹窗组件。
 		</Description>
 	</PropertyGroup>
 

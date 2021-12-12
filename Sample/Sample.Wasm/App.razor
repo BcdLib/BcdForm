@@ -1,5 +1,5 @@
 <Router AppAssembly="@typeof(Program).Assembly" PreferExactMatches="@true"
-        AdditionalAssemblies="new []{ typeof(BcdSample.Common.Pages.Index).Assembly}">
+        AdditionalAssemblies="new []{ typeof(Sample.Common.Pages.Index).Assembly}">
     <Found Context="routeData">
         <RouteView RouteData="@routeData" DefaultLayout="@typeof(MainLayout)"/>
     </Found>
@@ -10,4 +10,4 @@
     </NotFound>
 </Router>
 
-<BcdFormContainer />
+<BcdLib.Components.BcdFormContainer />

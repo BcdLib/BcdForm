@@ -1,10 +1,11 @@
-﻿using System;
+﻿using BcdLib.Components.Types;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace BcdLib
+namespace BcdLib.Components
 {
     internal class BcdFormOptions
     {

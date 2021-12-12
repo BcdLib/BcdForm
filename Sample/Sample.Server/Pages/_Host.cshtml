@@ -1,5 +1,5 @@
 ﻿@page "/"
-@namespace BcdLibSample.Server.Pages
+@namespace Sample.Server.Pages
 @addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
 @{
     Layout = null;
@@ -14,8 +14,8 @@
     <base href="~/" />
     <link rel="stylesheet" href="css/bootstrap/bootstrap.min.css" />
     <link href="css/site.css" rel="stylesheet" />
-    <link href="_content/BcdLib/index.css" rel="stylesheet">
-    <link href="BcdLibSample.Server.styles.css" rel="stylesheet" />
+    <link href="_content/BcdLib.BcdForm/index.css" rel="stylesheet">
+    <link href="Sample.Server.styles.css" rel="stylesheet" />
 </head>
 <body>
     <component type="typeof(App)" render-mode="ServerPrerendered" />
@@ -30,7 +30,7 @@
         <a href="" class="reload">Reload</a>
         <a class="dismiss">🗙</a>
     </div>
-    <script src="_content/BcdLib/index.js"></script>
+    <script src="_content/BcdLib.BcdForm/index.js"></script>
     <script src="_framework/blazor.server.js"></script>
 </body>
 </html>

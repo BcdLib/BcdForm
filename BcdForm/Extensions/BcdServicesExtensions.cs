@@ -1,10 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
-using BcdLib.Core;
+using BcdLib.Components.Core;
 using Microsoft.JSInterop;
 
-namespace BcdLib
+namespace BcdLib.Components.Extensions
 {
     public static class BcdServicesExtensions
     {
@@ -16,7 +16,7 @@ namespace BcdLib
         [Obsolete("replace this with UseBcdForm")]
         public static IServiceProvider AddBcdService(this IServiceProvider services)
         {
-            return UseBcdForm(services);
+            return services.UseBcdForm();
         }
 
         /// <summary>
