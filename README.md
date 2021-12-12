@@ -5,9 +5,9 @@ var form = new Component();
 await form.ShowAsync();
 ```
 
-[Live Demo](https://zxyao145.github.io/BcdLib/)
+[Live Demo](https://zxyao145.github.io/BcdForm/)
 
-[![Nuget](https://img.shields.io/nuget/v/BcdLib)](https://www.nuget.org/packages/BcdLib/)
+[![Nuget](https://img.shields.io/nuget/v/BcdLib.BcdForm)](https://www.nuget.org/packages/BcdLib.BcdForm/)
 
 # 1.Usage
 
