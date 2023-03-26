@@ -1,18 +1,21 @@
 ﻿
 $prefix-cls: 'bcd-form';
 $form-header-height: '50px';
-$header-border-bottom-color:#f0f0f0;
+$header-border-bottom-color: #f0f0f0;
 $header-background-color: #fff;
-$content-background-color:#fff;
+$content-background-color: #fff;
 
 $title-color: rgba(0, 0, 0, .85);
 $tool-color: rgba(0, 0, 0, 0.45);
-$tool-hover-color: rgba(0, 0, 0, .75) ;
+$tool-hover-color: rgba(0, 0, 0, .75);
+
+$body-padding: 14px;
 
 
 .draggable {
     cursor: move;
 }
+
 
 .#{$prefix-cls}-container {
     position: absolute;
@@ -31,7 +34,6 @@ $tool-hover-color: rgba(0, 0, 0, .75) ;
             position: absolute;
             width: 100%;
 
-
             .#{$prefix-cls}-mask {
                 position: fixed;
                 top: 0;
@@ -41,7 +43,7 @@ $tool-hover-color: rgba(0, 0, 0, .75) ;
                 z-index: 1000;
                 height: 100%;
                 background-color: rgba(0,0,0,.45);
-                pointer-events:all;
+                pointer-events: all;
 
                 &.#{$prefix-cls}-mask-hidden {
                     display: none;
@@ -50,6 +52,7 @@ $tool-hover-color: rgba(0, 0, 0, .75) ;
         }
     }
 }
+
 
 .#{$prefix-cls} {
     box-sizing: border-box;
@@ -69,6 +72,7 @@ $tool-hover-color: rgba(0, 0, 0, .75) ;
     margin: 0 auto;
     z-index: 20210307;
 
+
     .#{$prefix-cls}-content {
         position: relative;
         background-color: $content-background-color;
@@ -84,7 +88,7 @@ $tool-hover-color: rgba(0, 0, 0, .75) ;
             border-bottom: 1px solid #{$header-border-bottom-color};
             border-radius: 2px 2px 0 0;
             display: flex;
-			user-select:none;
+            user-select: none;
 
             .#{$prefix-cls}-title {
                 padding: 12px 12px;
@@ -149,11 +153,27 @@ $tool-hover-color: rgba(0, 0, 0, .75) ;
         }
 
         .#{$prefix-cls}-body {
-            padding: 24px;
+            padding: $body-padding;
             font-size: 14px;
             line-height: 1.5715;
             word-wrap: break-word;
             overflow: auto;
+        }
+
+        .#{$prefix-cls}-footer {
+            padding: $body-padding;
+            font-size: 14px;
+            line-height: 1.5715;
+            word-wrap: break-word;
+            overflow: auto;
+            padding: 14px;
+            margin: -14px;
+
+            &.sticky {
+                position: sticky;
+                bottom: -14px;
+                background-color: #fff;
+            }
         }
     }
 
@@ -162,23 +182,16 @@ $tool-hover-color: rgba(0, 0, 0, .75) ;
     }
 }
 
-.#{$prefix-cls}-centered {
-    text-align: center;
 
-    &::before {
-        display: inline-block;
-        width: 0;
-        height: 100%;
-        vertical-align: middle;
-        content: '';
-    }
+.#{$prefix-cls}-centered:not(.#{$prefix-cls}-max),
+.#{$prefix-cls}-centered:not(.#{$prefix-cls}-min)
+{
+    display: flex;
+    align-items: center;
+    height: 100%;
 
     .#{$prefix-cls} {
         top: 0;
-        display: inline-block;
-        text-align: left;
-        vertical-align: middle;
-        flex: 1;
     }
 }
 
@@ -186,12 +199,6 @@ $tool-hover-color: rgba(0, 0, 0, .75) ;
     .#{$prefix-cls} {
         max-width: calc(100vw - 16px);
         margin: 8px auto;
-    }
-
-    &.#{$prefix-cls}-centered {
-        .#{$prefix-cls} {
-            text-align: right;
-        }
     }
 }
 
@@ -241,6 +248,7 @@ $tool-hover-color: rgba(0, 0, 0, .75) ;
         }
     }
 }
+
 
 .#{$prefix-cls}-max {
     position: absolute;
