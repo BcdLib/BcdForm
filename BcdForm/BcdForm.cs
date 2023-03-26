@@ -9,6 +9,7 @@ using BcdLib.Components.Core;
 using BcdLib.Components.Extensions;
 using BcdLib.Components.Types;
 
+#nullable enable
 namespace BcdLib.Components
 {
     public abstract class BcdForm : IDisposable
@@ -33,7 +34,7 @@ namespace BcdLib.Components
         /// </summary>
         protected readonly IServiceProvider ServiceProvider;
 
-        protected BcdForm(string name = null)
+        protected BcdForm(string? name = null)
         {
             ServiceProvider = BcdServices.ServiceProvider;
             ServiceScope = BcdServices.ServiceProvider.CreateScope();
@@ -66,6 +67,55 @@ namespace BcdLib.Components
             set
             {
                 Options.Width = value;
+                ShouldReRender = true;
+            }
+        }
+
+        /// <summary>
+        /// The distance to the top
+        /// </summary>
+        public int? Top
+        {
+            get => Options.Top;
+            set
+            {
+                Options.Top = value;
+                ShouldReRender = true;
+            }
+        }
+
+        /// <summary>
+        /// centered Modal
+        /// </summary>
+        public bool Centered
+        {
+            get => Options.Centered;
+            set
+            {
+                Options.Centered = value;
+                ShouldReRender = true;
+            }
+        }
+
+        /// <summary>
+        /// Sticky footer in the bottom
+        /// </summary>
+        public bool StickyFooter 
+        {
+            get => Options.StickyFooter;
+            set
+            {
+                Options.StickyFooter = value;
+                ShouldReRender = true;
+            }
+        }
+
+        public RenderFragment? Footer 
+        {
+            get => Options.Footer;
+            set
+            {
+                Options.Footer = value;
                 ShouldReRender = true;
             }
         }
@@ -282,13 +332,17 @@ namespace BcdLib.Components
             if (_firstRender)
             {
                 var sty = $"width: {Width}px;";
+                if(Top != null)
+                {
+                    sty += $"top: {Top}px;";
+                }
                 _lastNormal = sty;
             }
 
             return _lastNormal;
         }
 
-        private string _lastNormal;
+        private string _lastNormal = "";
         private bool _firstRender = true;
 
 
@@ -419,6 +473,14 @@ namespace BcdLib.Components
                 : FormState.ToCls();
         }
 
+        internal string GetFormCentered()
+        {
+            return Centered
+                ? $"bcd-form-centered"
+                : "";
+        }
+
+        
         /// <summary>
         /// Minimize form
         /// </summary>

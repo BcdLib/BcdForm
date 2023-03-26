@@ -1,10 +1,12 @@
 ﻿using BcdLib.Components.Types;
+using Microsoft.AspNetCore.Components;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
+#nullable enable
 namespace BcdLib.Components
 {
     internal class BcdFormOptions
@@ -17,6 +19,11 @@ namespace BcdLib.Components
         public int Width { get; set; } = 520;
 
         /// <summary>
+        /// The width of the form, in pixels
+        /// </summary>
+        public int? Top { get; set; } = null;
+
+        /// <summary>
         /// Where the form is minimized
         /// </summary>
         public MinPosition MinPosition { get; set; } = MinPosition.RightBottom;
@@ -24,7 +31,7 @@ namespace BcdLib.Components
         /// <summary>
         /// form body's style
         /// </summary>
-        public string BodyStyle { get; set; }
+        public string BodyStyle { get; set; } = "";
 
         /// <summary>
         /// Remove from DOM when closing. Default is true.
@@ -55,7 +62,7 @@ namespace BcdLib.Components
         /// <summary>
         /// the style of Mask, if <paramref name="ShowMask"/> is true.
         /// </summary>
-        public string MaskStyle { get; set; }
+        public string MaskStyle { get; set; } = "";
 
         /// <summary>
         /// the title of form. Default value is BcdForm
@@ -81,6 +88,21 @@ namespace BcdLib.Components
         /// Drag is only allowed in the viewport, if <paramref name="Draggable"/> is true.
         /// </summary>
         public bool DragInViewport { get; set; } = true;
+
+        /// <summary>
+        /// centered Modal
+        /// </summary>
+        public bool Centered { get; set; } = false;
+
+        /// <summary>
+        /// Footer
+        /// </summary>
+        public RenderFragment? Footer { get; set; }
+
+        /// <summary>
+        /// Sticky footer in the bottom
+        /// </summary>
+        public bool StickyFooter { get; set; } = false;
 
         #endregion
     }

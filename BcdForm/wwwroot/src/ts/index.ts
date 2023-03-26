@@ -1,4 +1,6 @@
-﻿import { autoDebug } from "./global";
+﻿import "../scss/index.scss";
+
+import { autoDebug } from "./global";
 import * as interop from "./interop";
 
 
