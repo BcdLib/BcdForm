@@ -636,6 +636,7 @@ namespace BcdLib.Components
         /// </summary>
         protected void StateHasChanged()
         {
+            this.ShouldReRender = true;
             BcdFormContainer.BcdFormContainerInstance.InvokeStateHasChanged();
         }
 
@@ -644,6 +645,7 @@ namespace BcdLib.Components
         /// </summary>
         protected Task StateHasChangedAsync()
         {
+            this.ShouldReRender = true;
             return BcdFormContainer.BcdFormContainerInstance.InvokeStateHasChangedAsync();
         }
 
