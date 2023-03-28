@@ -147,8 +147,8 @@ Demo see `BcdLib/BcdSample.Common/BcdForms/Nesting.razor`.
 | **JsInvokeAsync(string func, params object[] args)**     | protected          | the proxy of IJsRuntime.InvokeAsync                          | see IJsRuntime.InvokeVoidAsync                           | ValueTask<T> |
 | **InvokeStateHasChanged()**                              | protected          | StateHasChanged adapter                                      | --                                                       | void         |
 | **InvokeStateHasChangedAsync()**                         | protected          | InvokeAsync(StateHasChanged) adapter                         | --                                                       | Task         |
-| **AfterBcdRender(bool firstRender)**                     | protected virtual  | it will trigger in OnAfterRenderAsync, and It will be called **before AfterBcdRenderAsync** | **firstRender**: Is the form rendered for the first time | void         |
-| **AfterBcdRenderAsync(bool firstRender)**                | protected virtual  | it will trigger in OnAfterRenderAsync                        | **firstRender**: Is the form rendered for the first time | Task         |
+| **OnAfterRender(bool firstRender)**                     | protected virtual  | it will trigger in OnAfterRenderAsync, and It will be called **before AfterBcdRenderAsync** | **firstRender**: Is the form rendered for the first time | void         |
+| **OnAfterRenderAsync(bool firstRender)**                | protected virtual  | it will trigger in OnAfterRenderAsync                        | **firstRender**: Is the form rendered for the first time | Task         |
 | **Dispose(bool disposing)**                              | protected virtual  | dispose resources                                            | **disposing**: true to dispose the form's resources      | void         |
 
 # 4.OS Reference
